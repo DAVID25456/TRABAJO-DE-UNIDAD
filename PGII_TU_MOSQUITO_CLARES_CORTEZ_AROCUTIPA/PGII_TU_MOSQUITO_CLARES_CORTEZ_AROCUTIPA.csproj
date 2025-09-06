@@ -46,6 +46,120 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ejercicios\Ejercicio_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_01.Designer.cs">
+      <DependentUpon>Ejercicio_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_02.Designer.cs">
+      <DependentUpon>Ejercicio_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_03.Designer.cs">
+      <DependentUpon>Ejercicio_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_04.Designer.cs">
+      <DependentUpon>Ejercicio_04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_05.Designer.cs">
+      <DependentUpon>Ejercicio_05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_06.Designer.cs">
+      <DependentUpon>Ejercicio_06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_07.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_07.Designer.cs">
+      <DependentUpon>Ejercicio_07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_08.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_08.Designer.cs">
+      <DependentUpon>Ejercicio_08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_09.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_09.Designer.cs">
+      <DependentUpon>Ejercicio_09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_10.Designer.cs">
+      <DependentUpon>Ejercicio_10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_11.Designer.cs">
+      <DependentUpon>Ejercicio_11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_12.Designer.cs">
+      <DependentUpon>Ejercicio_12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_13.Designer.cs">
+      <DependentUpon>Ejercicio_13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_14.Designer.cs">
+      <DependentUpon>Ejercicio_14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_15.Designer.cs">
+      <DependentUpon>Ejercicio_15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_16.Designer.cs">
+      <DependentUpon>Ejercicio_16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_17.Designer.cs">
+      <DependentUpon>Ejercicio_17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_18.Designer.cs">
+      <DependentUpon>Ejercicio_18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\Ejercicio_19.Designer.cs">
+      <DependentUpon>Ejercicio_19.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
