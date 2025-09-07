@@ -75,12 +75,17 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 
             if (chb_Coca_Cola.Checked)
             {
-                chb_Pepsi_Cola.Checked = false;0
+                chb_Pepsi_Cola.Checked = false;
             }
 
-            if (chb)
+            if (chb_Fanta.Checked)
             {
-                
+                chb_Fanta.Checked = false;
+            }
+
+            if (chb_Crush.Checked)
+            {
+                chb_Crush.Checked = false;
             }
         }
 
@@ -99,6 +104,10 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
                 txtadultos.Text = cant_adult.ToString();
             }
 
+            txttotal.Clear();
+            cant_total = cant_niños + cant_adult;
+            txttotal.Text = cant_total.ToString();
+
             if (chb_Pepsi_Cola.Checked)
             {
                 cant_pepsi++;
@@ -107,6 +116,7 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
             if (chb_Coca_Cola.Checked)
             {
                 cant_coca_cola++;
+                
             }
 
             if (chb_Fanta.Checked)
@@ -119,12 +129,12 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
                 cant_crush++;
             }
 
-            dgv_gaseosas.Rows.Clear();
-            dgv_gaseosas.Rows.Add("Pepsi Cola",cant_pepsi,"sin datos");
-            dgv_gaseosas.Rows.Add("Coca Cola", cant_coca_cola, "Sin datos");
-            dgv_gaseosas.Rows.Add("Fanta", cant_fanta, "Sin datos");
-            dgv_gaseosas.Rows.Add("Crush", cant_crush, "Sin datos");
+            double promedio_Pepsi = (cant_pepsi * 100) / cant_total;
+            double promedio_Coca_cola = (cant_coca_cola * 100) / cant_total;
+            double promedio_Fanta = (cant_fanta * 100) / cant_total;
+            double promedio_Crush = (cant_crush * 100) / cant_total;
 
+            resetearCheckBox();
 
             grb_gaseosas.Enabled = false;
             btnCancelar.Enabled = false;
@@ -132,10 +142,11 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 
             chb_Coca_Cola.Checked = false;
 
-
-            txttotal.Clear();
-            cant_total = cant_niños + cant_adult;
-            txttotal.Text = cant_total.ToString();
+            dgv_gaseosas.Rows.Clear();
+            dgv_gaseosas.Rows.Add("Pepsi Cola", cant_pepsi, promedio_Pepsi.ToString("F2") + "%");
+            dgv_gaseosas.Rows.Add("Coca Cola", cant_coca_cola, promedio_Coca_cola.ToString("F2") + "%");
+            dgv_gaseosas.Rows.Add("Fanta", cant_fanta, promedio_Fanta.ToString("F2") + "%");
+            dgv_gaseosas.Rows.Add("Crush", cant_crush, promedio_Crush.ToString("F2") + "%");
 
             txtedad.Clear();
             txtedad.Enabled = true;
