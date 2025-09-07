@@ -47,8 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clssBanco.cs" />
-    <Compile Include="clssCliente.cs" />
+    <Compile Include="Clases\Ejercicio_01\clssBanco.cs" />
+    <Compile Include="Clases\Ejercicio_01\clssCliente.cs" />
     <Compile Include="Ejercicios\Ejercicio_01.cs">
       <SubType>Form</SubType>
     </Compile>
