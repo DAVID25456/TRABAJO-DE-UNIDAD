@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ejercicio_13));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             this.btninformacion = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_edad = new System.Windows.Forms.Label();
             this.btnEncuesta = new System.Windows.Forms.Button();
             this.txtedad = new System.Windows.Forms.TextBox();
             this.grb_gaseosas = new System.Windows.Forms.GroupBox();
@@ -47,25 +48,27 @@
             this.btnRespuesta = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.txttotal = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.txtniños = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblNiños = new System.Windows.Forms.Label();
             this.txtadultos = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblAdultos = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grb_gaseosas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gaseosas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_Titulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(170, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(407, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ENCUESTA DE BEBIDAS GASEOSAS";
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(170, 24);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(407, 25);
+            this.lbl_Titulo.TabIndex = 0;
+            this.lbl_Titulo.Text = "ENCUESTA DE BEBIDAS GASEOSAS";
             // 
             // btninformacion
             // 
@@ -78,15 +81,15 @@
             this.btninformacion.UseVisualStyleBackColor = true;
             this.btninformacion.Click += new System.EventHandler(this.btninformacion_Click);
             // 
-            // label2
+            // lbl_edad
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Ingrese la edad";
+            this.lbl_edad.AutoSize = true;
+            this.lbl_edad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_edad.Location = new System.Drawing.Point(24, 79);
+            this.lbl_edad.Name = "lbl_edad";
+            this.lbl_edad.Size = new System.Drawing.Size(119, 20);
+            this.lbl_edad.TabIndex = 2;
+            this.lbl_edad.Text = "Ingrese la edad";
             // 
             // btnEncuesta
             // 
@@ -234,15 +237,15 @@
             this.txttotal.Size = new System.Drawing.Size(100, 26);
             this.txttotal.TabIndex = 10;
             // 
-            // label3
+            // lblTotal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(309, 322);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Total de personas";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(309, 322);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(136, 20);
+            this.lblTotal.TabIndex = 9;
+            this.lblTotal.Text = "Total de personas";
             // 
             // txtniños
             // 
@@ -253,15 +256,15 @@
             this.txtniños.Size = new System.Drawing.Size(100, 26);
             this.txtniños.TabIndex = 12;
             // 
-            // label4
+            // lblNiños
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(309, 354);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 20);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Total de niños";
+            this.lblNiños.AutoSize = true;
+            this.lblNiños.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNiños.Location = new System.Drawing.Point(309, 354);
+            this.lblNiños.Name = "lblNiños";
+            this.lblNiños.Size = new System.Drawing.Size(108, 20);
+            this.lblNiños.TabIndex = 11;
+            this.lblNiños.Text = "Total de niños";
             // 
             // txtadultos
             // 
@@ -272,15 +275,15 @@
             this.txtadultos.Size = new System.Drawing.Size(100, 26);
             this.txtadultos.TabIndex = 14;
             // 
-            // label5
+            // lblAdultos
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(309, 386);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Total de adultos";
+            this.lblAdultos.AutoSize = true;
+            this.lblAdultos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdultos.Location = new System.Drawing.Point(309, 386);
+            this.lblAdultos.Name = "lblAdultos";
+            this.lblAdultos.Size = new System.Drawing.Size(122, 20);
+            this.lblAdultos.TabIndex = 13;
+            this.lblAdultos.Text = "Total de adultos";
             // 
             // btnCancelar
             // 
@@ -293,6 +296,10 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Ejercicio_13
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,26 +307,27 @@
             this.ClientSize = new System.Drawing.Size(586, 430);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtadultos);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblAdultos);
             this.Controls.Add(this.txtniños);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblNiños);
             this.Controls.Add(this.txttotal);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnRespuesta);
             this.Controls.Add(this.dgv_gaseosas);
             this.Controls.Add(this.grb_gaseosas);
             this.Controls.Add(this.txtedad);
             this.Controls.Add(this.btnEncuesta);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_edad);
             this.Controls.Add(this.btninformacion);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Titulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ejercicio_13";
             this.Text = "Ejercicio_13";
             this.grb_gaseosas.ResumeLayout(false);
             this.grb_gaseosas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gaseosas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,9 +335,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.Button btninformacion;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_edad;
         private System.Windows.Forms.TextBox txtedad;
         private System.Windows.Forms.Button btnEncuesta;
         private System.Windows.Forms.GroupBox grb_gaseosas;
@@ -344,11 +352,12 @@
         private System.Windows.Forms.CheckBox chb_Pepsi_Cola;
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.TextBox txttotal;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtniños;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblNiños;
         private System.Windows.Forms.TextBox txtadultos;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblAdultos;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

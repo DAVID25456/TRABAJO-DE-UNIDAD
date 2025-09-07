@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ejercicio_14));
             this.btninformacion = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.grb_Posicion_Jugador = new System.Windows.Forms.GroupBox();
             this.rdb_Delantero = new System.Windows.Forms.RadioButton();
             this.rdb_Medio = new System.Windows.Forms.RadioButton();
@@ -40,11 +40,11 @@
             this.txt_Goles = new System.Windows.Forms.TextBox();
             this.txt_Min = new System.Windows.Forms.TextBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_Goles = new System.Windows.Forms.Label();
+            this.lbl_Min_Jugadores = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.txt__Num_Uniforme = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_num_Uniforme = new System.Windows.Forms.Label();
             this.btn_Capturar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.dgv_Jugadores = new System.Windows.Forms.DataGridView();
@@ -53,6 +53,8 @@
             this.col_Posicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Minutos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Goles = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_num_jugadores = new System.Windows.Forms.TextBox();
+            this.lbl_num_jugadores = new System.Windows.Forms.Label();
             this.grb_Posicion_Jugador.SuspendLayout();
             this.grb_Datos_Jugador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Jugadores)).BeginInit();
@@ -69,15 +71,15 @@
             this.btninformacion.UseVisualStyleBackColor = true;
             this.btninformacion.Click += new System.EventHandler(this.btninformacion_Click);
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(189, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(358, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ESTADISTICAS DE JUGADORES";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(189, 24);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(358, 25);
+            this.lblTitulo.TabIndex = 3;
+            this.lblTitulo.Text = "ESTADISTICAS DE JUGADORES";
             // 
             // grb_Posicion_Jugador
             // 
@@ -86,7 +88,7 @@
             this.grb_Posicion_Jugador.Controls.Add(this.rdb_Defensa);
             this.grb_Posicion_Jugador.Controls.Add(this.rdb_portero);
             this.grb_Posicion_Jugador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grb_Posicion_Jugador.Location = new System.Drawing.Point(28, 90);
+            this.grb_Posicion_Jugador.Location = new System.Drawing.Point(28, 102);
             this.grb_Posicion_Jugador.Name = "grb_Posicion_Jugador";
             this.grb_Posicion_Jugador.Size = new System.Drawing.Size(169, 174);
             this.grb_Posicion_Jugador.TabIndex = 4;
@@ -143,13 +145,13 @@
             this.grb_Datos_Jugador.Controls.Add(this.txt_Goles);
             this.grb_Datos_Jugador.Controls.Add(this.txt_Min);
             this.grb_Datos_Jugador.Controls.Add(this.txt_Nombre);
-            this.grb_Datos_Jugador.Controls.Add(this.label5);
-            this.grb_Datos_Jugador.Controls.Add(this.label4);
-            this.grb_Datos_Jugador.Controls.Add(this.label3);
+            this.grb_Datos_Jugador.Controls.Add(this.lbl_Goles);
+            this.grb_Datos_Jugador.Controls.Add(this.lbl_Min_Jugadores);
+            this.grb_Datos_Jugador.Controls.Add(this.lblNombre);
             this.grb_Datos_Jugador.Controls.Add(this.txt__Num_Uniforme);
-            this.grb_Datos_Jugador.Controls.Add(this.label2);
+            this.grb_Datos_Jugador.Controls.Add(this.lbl_num_Uniforme);
             this.grb_Datos_Jugador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grb_Datos_Jugador.Location = new System.Drawing.Point(213, 90);
+            this.grb_Datos_Jugador.Location = new System.Drawing.Point(213, 102);
             this.grb_Datos_Jugador.Name = "grb_Datos_Jugador";
             this.grb_Datos_Jugador.Size = new System.Drawing.Size(316, 174);
             this.grb_Datos_Jugador.TabIndex = 5;
@@ -180,32 +182,32 @@
             this.txt_Nombre.TabIndex = 5;
             this.txt_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Nombre_KeyPress);
             // 
-            // label5
+            // lbl_Goles
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Goles Anotados";
+            this.lbl_Goles.AutoSize = true;
+            this.lbl_Goles.Location = new System.Drawing.Point(10, 133);
+            this.lbl_Goles.Name = "lbl_Goles";
+            this.lbl_Goles.Size = new System.Drawing.Size(124, 20);
+            this.lbl_Goles.TabIndex = 4;
+            this.lbl_Goles.Text = "Goles Anotados";
             // 
-            // label4
+            // lbl_Min_Jugadores
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Min. Jugados";
+            this.lbl_Min_Jugadores.AutoSize = true;
+            this.lbl_Min_Jugadores.Location = new System.Drawing.Point(31, 100);
+            this.lbl_Min_Jugadores.Name = "lbl_Min_Jugadores";
+            this.lbl_Min_Jugadores.Size = new System.Drawing.Size(103, 20);
+            this.lbl_Min_Jugadores.TabIndex = 3;
+            this.lbl_Min_Jugadores.Text = "Min. Jugados";
             // 
-            // label3
+            // lblNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(69, 67);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(65, 20);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Nombre";
             // 
             // txt__Num_Uniforme
             // 
@@ -215,19 +217,19 @@
             this.txt__Num_Uniforme.TabIndex = 1;
             this.txt__Num_Uniforme.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt__Num_Uniforme_KeyPress);
             // 
-            // label2
+            // lbl_num_Uniforme
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "N° Uniforme";
+            this.lbl_num_Uniforme.AutoSize = true;
+            this.lbl_num_Uniforme.Location = new System.Drawing.Point(40, 34);
+            this.lbl_num_Uniforme.Name = "lbl_num_Uniforme";
+            this.lbl_num_Uniforme.Size = new System.Drawing.Size(94, 20);
+            this.lbl_num_Uniforme.TabIndex = 0;
+            this.lbl_num_Uniforme.Text = "N° Uniforme";
             // 
             // btn_Capturar
             // 
             this.btn_Capturar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Capturar.Location = new System.Drawing.Point(535, 95);
+            this.btn_Capturar.Location = new System.Drawing.Point(535, 107);
             this.btn_Capturar.Name = "btn_Capturar";
             this.btn_Capturar.Size = new System.Drawing.Size(88, 52);
             this.btn_Capturar.TabIndex = 6;
@@ -238,7 +240,7 @@
             // btn_Salir
             // 
             this.btn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.Location = new System.Drawing.Point(535, 156);
+            this.btn_Salir.Location = new System.Drawing.Point(535, 165);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(88, 32);
             this.btn_Salir.TabIndex = 7;
@@ -257,7 +259,7 @@
             this.col_Posicion,
             this.col_Minutos,
             this.col_Goles});
-            this.dgv_Jugadores.Location = new System.Drawing.Point(28, 279);
+            this.dgv_Jugadores.Location = new System.Drawing.Point(28, 291);
             this.dgv_Jugadores.Name = "dgv_Jugadores";
             this.dgv_Jugadores.ReadOnly = true;
             this.dgv_Jugadores.Size = new System.Drawing.Size(543, 150);
@@ -293,17 +295,38 @@
             this.col_Goles.Name = "col_Goles";
             this.col_Goles.ReadOnly = true;
             // 
+            // txt_num_jugadores
+            // 
+            this.txt_num_jugadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_num_jugadores.Location = new System.Drawing.Point(393, 65);
+            this.txt_num_jugadores.Name = "txt_num_jugadores";
+            this.txt_num_jugadores.ReadOnly = true;
+            this.txt_num_jugadores.Size = new System.Drawing.Size(100, 26);
+            this.txt_num_jugadores.TabIndex = 9;
+            // 
+            // lbl_num_jugadores
+            // 
+            this.lbl_num_jugadores.AutoSize = true;
+            this.lbl_num_jugadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_num_jugadores.Location = new System.Drawing.Point(227, 68);
+            this.lbl_num_jugadores.Name = "lbl_num_jugadores";
+            this.lbl_num_jugadores.Size = new System.Drawing.Size(161, 20);
+            this.lbl_num_jugadores.TabIndex = 10;
+            this.lbl_num_jugadores.Text = "Numero de jugadores";
+            // 
             // Ejercicio_14
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 450);
+            this.Controls.Add(this.lbl_num_jugadores);
+            this.Controls.Add(this.txt_num_jugadores);
             this.Controls.Add(this.dgv_Jugadores);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_Capturar);
             this.Controls.Add(this.grb_Datos_Jugador);
             this.Controls.Add(this.grb_Posicion_Jugador);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btninformacion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ejercicio_14";
@@ -321,20 +344,20 @@
         #endregion
 
         private System.Windows.Forms.Button btninformacion;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox grb_Posicion_Jugador;
         private System.Windows.Forms.RadioButton rdb_Delantero;
         private System.Windows.Forms.RadioButton rdb_Medio;
         private System.Windows.Forms.RadioButton rdb_Defensa;
         private System.Windows.Forms.RadioButton rdb_portero;
         private System.Windows.Forms.GroupBox grb_Datos_Jugador;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_num_Uniforme;
         private System.Windows.Forms.TextBox txt_Goles;
         private System.Windows.Forms.TextBox txt_Min;
         private System.Windows.Forms.TextBox txt_Nombre;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_Goles;
+        private System.Windows.Forms.Label lbl_Min_Jugadores;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txt__Num_Uniforme;
         private System.Windows.Forms.Button btn_Capturar;
         private System.Windows.Forms.Button btn_Salir;
@@ -344,5 +367,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Posicion;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Minutos;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Goles;
+        private System.Windows.Forms.TextBox txt_num_jugadores;
+        private System.Windows.Forms.Label lbl_num_jugadores;
     }
 }
