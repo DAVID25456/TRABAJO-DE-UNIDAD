@@ -39,7 +39,7 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA
             }
             else
             {
-                MessageBox.Show("Error, Datos incorrectos");
+                MessageBox.Show("Credenciales Incorrectas","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
     }

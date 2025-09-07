@@ -12,9 +12,152 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 {
     public partial class Ejercicio_13 : Form
     {
+        int cant_niños = 0, cant_adult = 0;
+        int cant_total;
+
+        int cant_pepsi = 0, cant_coca_cola = 0, cant_fanta = 0, cant_crush = 0; 
+
         public Ejercicio_13()
         {
             InitializeComponent();
+
+            grb_gaseosas.Enabled = false;
+
+            btnRespuesta.Enabled = false;
+            btnCancelar.Enabled = false;
+        }
+
+        private void btninformacion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Diseñe un programa para encuestar a un grupo de personas de diferentes edades acerca de sus preferencias en bebidas gaseosas entre Pepsi Cola, Coca Cola, Fanta y Crush. El resultado se debe mostrar en un GriView. La empresa encuestadora desea saber lo siguiente:\n  \n- Cuántas personas en total, prefieren cada tipo de gaseosa \n- Cuántas personas fueron encuestadas en cada rango de edades \n- Se pide agregar una columna al costado de cada marca de gaseosa que muestra el porcentaje respectivo", "Informacion del Ejercicio 13",MessageBoxButtons.OK);
+        }
+
+        private void btnEncuesta_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtedad.Text))
+            {
+                MessageBox.Show("Debe ingresar la edad para realizar la encuenta","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+
+            int edad = Convert.ToInt32(txtedad.Text);
+
+            if (edad >= 100)
+            {
+                MessageBox.Show("Tienes mas de 100 años????", "Imposible",MessageBoxButtons.OK,MessageBoxIcon.Question);
+            }
+            else
+            {
+                grb_gaseosas.Enabled = true;
+                txtedad.Enabled = false;
+
+                btnRespuesta.Enabled = true;
+                btnCancelar.Enabled = true;
+            }
+        }
+
+        
+        private void txtedad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Solo puede ingresar numeros","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
+        }
+
+        private void resetearCheckBox()
+        {
+            if (chb_Pepsi_Cola.Checked)
+            {
+                chb_Pepsi_Cola.Checked = false;
+            }
+
+            if (chb_Coca_Cola.Checked)
+            {
+                chb_Pepsi_Cola.Checked = false;0
+            }
+
+            if (chb)
+            {
+                
+            }
+        }
+
+        private void btnRespuesta_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txtedad.Text) <=18)
+            {
+                cant_niños++;
+                txtniños.Clear();
+                txtniños.Text = cant_niños.ToString();
+            }
+            else
+            {
+                cant_adult++;
+                txtadultos.Clear();
+                txtadultos.Text = cant_adult.ToString();
+            }
+
+            if (chb_Pepsi_Cola.Checked)
+            {
+                cant_pepsi++;
+            }
+
+            if (chb_Coca_Cola.Checked)
+            {
+                cant_coca_cola++;
+            }
+
+            if (chb_Fanta.Checked)
+            {
+                cant_fanta++;
+            }
+
+            if (chb_Crush.Checked)
+            {
+                cant_crush++;
+            }
+
+            dgv_gaseosas.Rows.Clear();
+            dgv_gaseosas.Rows.Add("Pepsi Cola",cant_pepsi,"sin datos");
+            dgv_gaseosas.Rows.Add("Coca Cola", cant_coca_cola, "Sin datos");
+            dgv_gaseosas.Rows.Add("Fanta", cant_fanta, "Sin datos");
+            dgv_gaseosas.Rows.Add("Crush", cant_crush, "Sin datos");
+
+
+            grb_gaseosas.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnRespuesta.Enabled = false;
+
+            chb_Coca_Cola.Checked = false;
+
+
+            txttotal.Clear();
+            cant_total = cant_niños + cant_adult;
+            txttotal.Text = cant_total.ToString();
+
+            txtedad.Clear();
+            txtedad.Enabled = true;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult Result = MessageBox.Show("Esta seguro que desea cancelar su respuesta","Pregunta",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (Result == DialogResult.Yes)
+            {
+                grb_gaseosas.Enabled = false;
+                btnRespuesta.Enabled = false;
+                txtedad.Clear();
+                txtedad.Enabled = true;
+                btnCancelar.Enabled = false;
+            }
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

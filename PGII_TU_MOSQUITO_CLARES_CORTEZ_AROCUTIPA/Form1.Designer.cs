@@ -43,7 +43,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(239, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(229, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(164, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -52,9 +52,10 @@
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(126, 162);
+            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.Location = new System.Drawing.Point(138, 143);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
+            this.btnsalir.Size = new System.Drawing.Size(78, 34);
             this.btnsalir.TabIndex = 38;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
@@ -62,9 +63,10 @@
             // 
             // btnacceder
             // 
-            this.btnacceder.Location = new System.Drawing.Point(26, 162);
+            this.btnacceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnacceder.Location = new System.Drawing.Point(17, 143);
             this.btnacceder.Name = "btnacceder";
-            this.btnacceder.Size = new System.Drawing.Size(75, 23);
+            this.btnacceder.Size = new System.Drawing.Size(79, 34);
             this.btnacceder.TabIndex = 37;
             this.btnacceder.Text = "Acceder";
             this.btnacceder.UseVisualStyleBackColor = true;
@@ -72,46 +74,50 @@
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(101, 105);
+            this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword.Location = new System.Drawing.Point(116, 90);
             this.txtpassword.MaxLength = 10;
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
-            this.txtpassword.Size = new System.Drawing.Size(100, 20);
+            this.txtpassword.Size = new System.Drawing.Size(100, 26);
             this.txtpassword.TabIndex = 36;
             // 
             // lblpassword
             // 
             this.lblpassword.AutoSize = true;
-            this.lblpassword.Location = new System.Drawing.Point(23, 112);
+            this.lblpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpassword.Location = new System.Drawing.Point(13, 93);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(61, 13);
+            this.lblpassword.Size = new System.Drawing.Size(92, 20);
             this.lblpassword.TabIndex = 35;
             this.lblpassword.Text = "Contraseña";
             // 
             // lblusuario
             // 
             this.lblusuario.AutoSize = true;
-            this.lblusuario.Location = new System.Drawing.Point(23, 82);
+            this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.Location = new System.Drawing.Point(13, 63);
             this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(43, 13);
+            this.lblusuario.Size = new System.Drawing.Size(64, 20);
             this.lblusuario.TabIndex = 34;
             this.lblusuario.Text = "Usuario";
             // 
             // txtusuario
             // 
-            this.txtusuario.Location = new System.Drawing.Point(101, 79);
+            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusuario.Location = new System.Drawing.Point(116, 60);
             this.txtusuario.MaxLength = 20;
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(100, 20);
+            this.txtusuario.Size = new System.Drawing.Size(100, 26);
             this.txtusuario.TabIndex = 33;
             // 
             // lbltitulo
             // 
             this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.Location = new System.Drawing.Point(68, 23);
+            this.lbltitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Location = new System.Drawing.Point(41, 12);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(80, 24);
+            this.lbltitulo.Size = new System.Drawing.Size(138, 39);
             this.lbltitulo.TabIndex = 32;
             this.lbltitulo.Text = "Acceso";
             // 
@@ -119,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 221);
+            this.ClientSize = new System.Drawing.Size(406, 192);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnacceder);
@@ -128,6 +134,7 @@
             this.Controls.Add(this.lblusuario);
             this.Controls.Add(this.txtusuario);
             this.Controls.Add(this.lbltitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
