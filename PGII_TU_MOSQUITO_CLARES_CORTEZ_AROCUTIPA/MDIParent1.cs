@@ -107,6 +107,7 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA
         {
             Ejercicio_01 ejr01 = new Ejercicio_01();
             ejr01.Show();
+            this.Close();
         }
 
         private void eJERCICIO02ToolStripMenuItem_Click(object sender, EventArgs e)
