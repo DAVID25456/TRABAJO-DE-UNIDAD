@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ejercicio_17));
             this.btninformacion = new System.Windows.Forms.Button();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.lbl_filas = new System.Windows.Forms.Label();
@@ -208,6 +209,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.btninformacion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ejercicio_17";
             this.Text = "Ejercicio_17";
             this.groupBox1.ResumeLayout(false);

@@ -27,7 +27,7 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 
         private void btninformacion_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Utilizando Arrays elabore lo siguiente. Crear una matriz de N*M, el cual debe permitir ingresar números por teclado. El programa debe permitir buscar un número y marcarlo en el array", "Informacion del Ejercicio 16", MessageBoxButtons.OK);
+            MessageBox.Show("Utilizando Arrays elabore lo siguiente. Crear una matriz de N*M, el cual debe permitir ingresar números por teclado. El programa debe permitir buscar un número y marcarlo en el array", "Informacion del Ejercicio 17", MessageBoxButtons.OK);
         }
 
         private void txt_filas_KeyPress(object sender, KeyPressEventArgs e)

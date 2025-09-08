@@ -198,6 +198,9 @@
     <EmbeddedResource Include="Ejercicios\Ejercicio_17.resx">
       <DependentUpon>Ejercicio_17.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\Ejercicio_18.resx">
+      <DependentUpon>Ejercicio_18.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
