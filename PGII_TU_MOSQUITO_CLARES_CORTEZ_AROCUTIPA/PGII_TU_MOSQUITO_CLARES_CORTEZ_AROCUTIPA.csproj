@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Clases\Ejercicio_01\clssBanco.cs" />
     <Compile Include="Clases\Ejercicio_01\clssCliente.cs" />
+    <Compile Include="Clases\Ejercicio_18\cls_Estudiante.cs" />
     <Compile Include="Ejercicios\Ejercicio_01.cs">
       <SubType>Form</SubType>
     </Compile>
