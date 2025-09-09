@@ -15,8 +15,5 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Clases.Ejercicio_18
         public string nombres { get; set; }
         public string apellidos { get; set; }
         public string codigo { get; set; }
-
-
-
     }
 }

@@ -47,7 +47,13 @@
             this.lbl_Monto = new System.Windows.Forms.Label();
             this.txt_Monto = new System.Windows.Forms.TextBox();
             this.btn_Generar_Matricula = new System.Windows.Forms.Button();
+            this.lbl_Credito = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.col_codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Cursos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Creditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grb_Estudiante.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btninformacion
@@ -168,6 +174,7 @@
             this.btn_Agregar.TabIndex = 18;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // btn_Quitar
             // 
@@ -178,6 +185,7 @@
             this.btn_Quitar.TabIndex = 19;
             this.btn_Quitar.Text = "Quitar";
             this.btn_Quitar.UseVisualStyleBackColor = true;
+            this.btn_Quitar.Click += new System.EventHandler(this.btn_Quitar_Click);
             // 
             // lst_Cursos_Matricula
             // 
@@ -227,12 +235,59 @@
             this.btn_Generar_Matricula.TabIndex = 23;
             this.btn_Generar_Matricula.Text = "Generar matricula";
             this.btn_Generar_Matricula.UseVisualStyleBackColor = true;
+            this.btn_Generar_Matricula.Click += new System.EventHandler(this.btn_Generar_Matricula_Click);
+            // 
+            // lbl_Credito
+            // 
+            this.lbl_Credito.AutoSize = true;
+            this.lbl_Credito.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Credito.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_Credito.Location = new System.Drawing.Point(12, 289);
+            this.lbl_Credito.Name = "lbl_Credito";
+            this.lbl_Credito.Size = new System.Drawing.Size(182, 20);
+            this.lbl_Credito.TabIndex = 24;
+            this.lbl_Credito.Text = "1 Credito = 100 Soles";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_codigo,
+            this.col_Cursos,
+            this.col_Creditos});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 335);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(541, 150);
+            this.dataGridView1.TabIndex = 25;
+            // 
+            // col_codigo
+            // 
+            this.col_codigo.HeaderText = "Codigo";
+            this.col_codigo.Name = "col_codigo";
+            this.col_codigo.ReadOnly = true;
+            // 
+            // col_Cursos
+            // 
+            this.col_Cursos.HeaderText = "Cursos";
+            this.col_Cursos.Name = "col_Cursos";
+            this.col_Cursos.ReadOnly = true;
+            // 
+            // col_Creditos
+            // 
+            this.col_Creditos.HeaderText = "Creditos";
+            this.col_Creditos.Name = "col_Creditos";
+            this.col_Creditos.ReadOnly = true;
             // 
             // Ejercicio_18
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 450);
+            this.ClientSize = new System.Drawing.Size(682, 524);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lbl_Credito);
             this.Controls.Add(this.btn_Generar_Matricula);
             this.Controls.Add(this.txt_Monto);
             this.Controls.Add(this.lbl_Monto);
@@ -250,6 +305,7 @@
             this.Text = "Ejercicio_18";
             this.grb_Estudiante.ResumeLayout(false);
             this.grb_Estudiante.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,5 +331,10 @@
         private System.Windows.Forms.Label lbl_Monto;
         private System.Windows.Forms.TextBox txt_Monto;
         private System.Windows.Forms.Button btn_Generar_Matricula;
+        private System.Windows.Forms.Label lbl_Credito;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Cursos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Creditos;
     }
 }

@@ -89,6 +89,8 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 
         private void btn_Mostrar_Click(object sender, EventArgs e)
         {
+            txt_numero.Enabled = true;
+
             int a = Convert.ToInt32(txt_filas.Text);
             int b = Convert.ToInt32(txt_columnas.Text);
 
@@ -167,6 +169,7 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
             txt_filas.Clear();
             txt_columnas.Clear();
             txt_numero.Clear();
+            txt_numero.Enabled = false;
 
             btn_matriz.Enabled = true;
             btn_Mostrar.Enabled = false;

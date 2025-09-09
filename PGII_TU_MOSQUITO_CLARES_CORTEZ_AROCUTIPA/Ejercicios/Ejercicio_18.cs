@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 {
@@ -17,12 +18,16 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
     {
         cls_Estudiante ObjEstudiante = new cls_Estudiante();
 
-        //Crear un array donde se almacenen los cursos
-        //permitir que el list box de cursos lea el array
+        string[] cursos = {"Matematica [4]","Comunicacion [3]","Historia [5]","Biologia [3]"};
 
         public Ejercicio_18()
         {
             InitializeComponent();
+
+            for (int i = 0; i < cursos.Length; i++)
+            {
+                lst_Cursos.Items.Add(cursos[i]);
+            }
         }
 
         private void btninformacion_Click(object sender, EventArgs e)
@@ -50,8 +55,6 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 
         private void txt_Codigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //https://es.stackoverflow.com/questions/602391/permitir-copiar-y-pegar-n%C3%BAmeros-en-un-textbox-de-tipo-num%C3%A9rico-c
-
             if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
             {
                 MessageBox.Show("Solo Puede ingresar Numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -64,6 +67,60 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
             if (e.Control && e.KeyCode == Keys.V)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_Nombres.Text) || 
+                string.IsNullOrEmpty(txt_Apellidos.Text) || 
+                string.IsNullOrEmpty(txt_Codigo.Text))
+            {
+                MessageBox.Show("Debe agregar primero los datos del estudiante");
+                return;
+            }
+
+            ObjEstudiante.nombres = txt_Nombres.Text;
+            ObjEstudiante.apellidos = txt_Apellidos.Text;
+            ObjEstudiante.codigo = txt_Codigo.Text;
+
+            foreach (string elemento in lst_Cursos.SelectedItems)
+            {
+                if (!lst_Cursos_Matricula.Items.Contains(elemento))
+                {
+                    lst_Cursos_Matricula.Items.Add(elemento);
+                }
+                else
+                {
+                    MessageBox.Show($"El curso '{elemento}' ya está en la matrícula.");
+                }
+            }
+        }
+
+        private void btn_Quitar_Click(object sender, EventArgs e)
+        {
+            int indice = lst_Cursos_Matricula.SelectedIndex;
+
+            if (indice != -1)
+            {
+                lst_Cursos_Matricula.Items.RemoveAt(indice);
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un elemento para eliminar");
+            }
+
+
+        }
+
+        private void btn_Generar_Matricula_Click(object sender, EventArgs e)
+        {
+            foreach (string elemento in lst_Cursos_Matricula.SelectedItems)
+            {
+                switch (elemento)
+                {
+                    case : 
+                }
             }
         }
     }
