@@ -91,7 +91,13 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 
         private void btnRespuesta_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(txtedad.Text) <=18)
+            if (!chb_Coca_Cola.Checked && !chb_Pepsi_Cola.Checked && !chb_Fanta.Checked && !chb_Crush.Checked)
+            {
+                MessageBox.Show("Debe elegir algun valor","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (Convert.ToInt32(txtedad.Text) <18)
             {
                 cant_niños++;
                 txtniños.Clear();
