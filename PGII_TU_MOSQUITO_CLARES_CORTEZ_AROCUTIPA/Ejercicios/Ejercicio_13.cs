@@ -75,7 +75,7 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 
             if (chb_Coca_Cola.Checked)
             {
-                chb_Pepsi_Cola.Checked = false;
+                chb_Coca_Cola.Checked = false;
             }
 
             if (chb_Fanta.Checked)
