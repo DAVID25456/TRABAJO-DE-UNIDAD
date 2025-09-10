@@ -125,7 +125,43 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 
             txt_Sub_Total.Text = Obj_Producto.Sub_Total().ToString();
 
-            dgv_Mantenimiento.Rows.Add(Obj_Producto.numero, Obj_Producto.producto);
+            if (rdb_Bueno.Checked)
+            {
+                Obj_Producto.condicion = "Bueno";
+            }
+            else if (rdb_Malo.Checked)
+            {
+                Obj_Producto.condicion = "Malo";
+            }
+            else if (rdb_Regular.Checked)
+            {
+                Obj_Producto.condicion = "Regular";
+            }
+            else
+            {
+                MessageBox.Show("Debe Escoger un valor en la condicion");
+                return;
+            }
+
+            if (chb_Activo.Checked)
+            {
+                Obj_Producto.estado = "Activo";
+            }
+            else
+            {
+                Obj_Producto.estado = "No Activo";
+            }
+
+            dgv_Mantenimiento.Rows.Add(Obj_Producto.numero, 
+                                       Obj_Producto.producto, 
+                                       Obj_Producto.categoria,
+                                       Obj_Producto.precio,
+                                       Obj_Producto.cantidad,
+                                       Obj_Producto.Sub_Total().ToString(),
+                                       Obj_Producto.condicion,
+                                       Obj_Producto.estado);
+
+
 
         }
 
@@ -160,6 +196,25 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
                 MessageBox.Show("Ingrese la cantidad");
                 return;
             }
+        }
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            txt_Numero.Clear();
+            txt_Producto.Clear();
+            txt_Precio.Clear();
+            txt_Cantidad.Clear();
+            txt_Sub_Total.Clear();
+
+            chb_Activo.Checked = false;
+
+            rdb_Bueno.Checked = false;
+            rdb_Malo.Checked = false;
+            rdb_Regular.Checked = false;
+
+            cmb_Categoria.SelectedIndex = -1;
+            cmb_Categoria.Text = string.Empty;
+
         }
     }
 }

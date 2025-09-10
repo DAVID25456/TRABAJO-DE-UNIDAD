@@ -13,6 +13,8 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Clases.Ejercicio_19
         private string Categoria;
         private double Precio;
         private int Cantidad;
+        private string Condicion;
+        private string Estado;
 
 
         public string numero { get; set; }
@@ -20,6 +22,8 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Clases.Ejercicio_19
         public string categoria { get; set; }
         public double precio { get; set; }
         public int cantidad { get; set; }
+        public string condicion { get; set; }
+        public string estado { get; set; }
 
 
         public double Sub_Total()

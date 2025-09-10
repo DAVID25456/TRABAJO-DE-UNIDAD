@@ -143,6 +143,12 @@
             // 
             this.cmb_Categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Categoria.FormattingEnabled = true;
+            this.cmb_Categoria.Items.AddRange(new object[] {
+            "Electrónica",
+            "Ropa",
+            "Alimentos",
+            "Hogar",
+            "Juguetes"});
             this.cmb_Categoria.Location = new System.Drawing.Point(119, 147);
             this.cmb_Categoria.Name = "cmb_Categoria";
             this.cmb_Categoria.Size = new System.Drawing.Size(121, 28);
@@ -322,6 +328,7 @@
             this.btn_Cancelar.TabIndex = 40;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Cerrar
             // 
