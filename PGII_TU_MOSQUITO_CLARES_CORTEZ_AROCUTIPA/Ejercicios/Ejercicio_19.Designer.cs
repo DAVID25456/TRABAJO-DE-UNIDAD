@@ -141,6 +141,7 @@
             // 
             // cmb_Categoria
             // 
+            this.cmb_Categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Categoria.FormattingEnabled = true;
             this.cmb_Categoria.Items.AddRange(new object[] {
@@ -319,6 +320,7 @@
             this.btn_Eliminar.TabIndex = 39;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // btn_Cancelar
             // 
@@ -345,42 +347,46 @@
             // btn_Primero
             // 
             this.btn_Primero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Primero.Location = new System.Drawing.Point(75, 348);
+            this.btn_Primero.Location = new System.Drawing.Point(75, 326);
             this.btn_Primero.Name = "btn_Primero";
             this.btn_Primero.Size = new System.Drawing.Size(90, 26);
             this.btn_Primero.TabIndex = 42;
             this.btn_Primero.Text = "Primero";
             this.btn_Primero.UseVisualStyleBackColor = true;
+            this.btn_Primero.Click += new System.EventHandler(this.btn_Primero_Click);
             // 
             // btn_Anterior
             // 
             this.btn_Anterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Anterior.Location = new System.Drawing.Point(184, 348);
+            this.btn_Anterior.Location = new System.Drawing.Point(184, 326);
             this.btn_Anterior.Name = "btn_Anterior";
             this.btn_Anterior.Size = new System.Drawing.Size(103, 26);
             this.btn_Anterior.TabIndex = 43;
             this.btn_Anterior.Text = "<<Anterior";
             this.btn_Anterior.UseVisualStyleBackColor = true;
+            this.btn_Anterior.Click += new System.EventHandler(this.btn_Anterior_Click);
             // 
             // btn_Siguiente
             // 
             this.btn_Siguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Siguiente.Location = new System.Drawing.Point(306, 348);
+            this.btn_Siguiente.Location = new System.Drawing.Point(306, 326);
             this.btn_Siguiente.Name = "btn_Siguiente";
             this.btn_Siguiente.Size = new System.Drawing.Size(103, 26);
             this.btn_Siguiente.TabIndex = 44;
             this.btn_Siguiente.Text = "Siguiente>>";
             this.btn_Siguiente.UseVisualStyleBackColor = true;
+            this.btn_Siguiente.Click += new System.EventHandler(this.btn_Siguiente_Click);
             // 
             // btn_Ultimo
             // 
             this.btn_Ultimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Ultimo.Location = new System.Drawing.Point(428, 348);
+            this.btn_Ultimo.Location = new System.Drawing.Point(428, 326);
             this.btn_Ultimo.Name = "btn_Ultimo";
             this.btn_Ultimo.Size = new System.Drawing.Size(103, 26);
             this.btn_Ultimo.TabIndex = 45;
             this.btn_Ultimo.Text = "Ultimo";
             this.btn_Ultimo.UseVisualStyleBackColor = true;
+            this.btn_Ultimo.Click += new System.EventHandler(this.btn_Ultimo_Click);
             // 
             // dgv_Mantenimiento
             // 
@@ -396,7 +402,7 @@
             this.col_subtotal,
             this.col_condicion,
             this.col_Estado});
-            this.dgv_Mantenimiento.Location = new System.Drawing.Point(12, 380);
+            this.dgv_Mantenimiento.Location = new System.Drawing.Point(12, 358);
             this.dgv_Mantenimiento.Name = "dgv_Mantenimiento";
             this.dgv_Mantenimiento.ReadOnly = true;
             this.dgv_Mantenimiento.Size = new System.Drawing.Size(581, 150);
@@ -408,62 +414,62 @@
             this.col_numero.HeaderText = "Numero";
             this.col_numero.Name = "col_numero";
             this.col_numero.ReadOnly = true;
-            this.col_numero.Width = 50;
+            this.col_numero.Width = 80;
             // 
             // col_Producto
             // 
             this.col_Producto.HeaderText = "Porducto";
             this.col_Producto.Name = "col_Producto";
             this.col_Producto.ReadOnly = true;
-            this.col_Producto.Width = 50;
+            this.col_Producto.Width = 80;
             // 
             // col_Categoria
             // 
             this.col_Categoria.HeaderText = "Categoria";
             this.col_Categoria.Name = "col_Categoria";
             this.col_Categoria.ReadOnly = true;
-            this.col_Categoria.Width = 50;
+            this.col_Categoria.Width = 80;
             // 
             // col_precio
             // 
             this.col_precio.HeaderText = "Precio";
             this.col_precio.Name = "col_precio";
             this.col_precio.ReadOnly = true;
-            this.col_precio.Width = 50;
+            this.col_precio.Width = 80;
             // 
             // col_cantidad
             // 
             this.col_cantidad.HeaderText = "Cantidad";
             this.col_cantidad.Name = "col_cantidad";
             this.col_cantidad.ReadOnly = true;
-            this.col_cantidad.Width = 50;
+            this.col_cantidad.Width = 80;
             // 
             // col_subtotal
             // 
             this.col_subtotal.HeaderText = "Sub Total";
             this.col_subtotal.Name = "col_subtotal";
             this.col_subtotal.ReadOnly = true;
-            this.col_subtotal.Width = 50;
+            this.col_subtotal.Width = 80;
             // 
             // col_condicion
             // 
             this.col_condicion.HeaderText = "Condicion";
             this.col_condicion.Name = "col_condicion";
             this.col_condicion.ReadOnly = true;
-            this.col_condicion.Width = 50;
+            this.col_condicion.Width = 80;
             // 
             // col_Estado
             // 
             this.col_Estado.HeaderText = "Estado";
             this.col_Estado.Name = "col_Estado";
             this.col_Estado.ReadOnly = true;
-            this.col_Estado.Width = 50;
+            this.col_Estado.Width = 80;
             // 
             // Ejercicio_19
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 545);
+            this.ClientSize = new System.Drawing.Size(605, 521);
             this.Controls.Add(this.dgv_Mantenimiento);
             this.Controls.Add(this.btn_Ultimo);
             this.Controls.Add(this.btn_Siguiente);

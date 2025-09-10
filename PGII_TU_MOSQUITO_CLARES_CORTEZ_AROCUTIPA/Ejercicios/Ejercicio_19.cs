@@ -15,6 +15,8 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
     public partial class Ejercicio_19 : Form
     {
         cls_Producto Obj_Producto = new cls_Producto();
+        private DataGridViewRow filaSeleccionada = null;
+
 
         public Ejercicio_19()
         {
@@ -73,7 +75,6 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
         private void btn_Nuevo_Click(object sender, EventArgs e)
         {
             ActivarBotones(false, true, false, false, true, true);
-
             Activartext(true);
         }
 
@@ -128,7 +129,6 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
         private void btn_Grabar_Click(object sender, EventArgs e)
         {
             verificacion();
-            //ActivarBotones("");
 
             txt_Sub_Total.Text = Obj_Producto.Sub_Total().ToString();
 
@@ -159,16 +159,37 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
                 Obj_Producto.estado = "No Activo";
             }
 
-            dgv_Mantenimiento.Rows.Add(Obj_Producto.numero, 
-                                       Obj_Producto.producto, 
-                                       Obj_Producto.categoria,
-                                       Obj_Producto.precio,
-                                       Obj_Producto.cantidad,
-                                       Obj_Producto.Sub_Total().ToString(),
-                                       Obj_Producto.condicion,
-                                       Obj_Producto.estado);
+            if (filaSeleccionada == null)
+            {
+                dgv_Mantenimiento.Rows.Add(
+                    Obj_Producto.numero,
+                    Obj_Producto.producto,
+                    Obj_Producto.categoria,
+                    Obj_Producto.precio,
+                    Obj_Producto.cantidad,
+                    Obj_Producto.Sub_Total().ToString(),
+                    Obj_Producto.condicion,
+                    Obj_Producto.estado
+                );
+                
+            }
+            else
+            {
+                filaSeleccionada.Cells[0].Value = Obj_Producto.numero;
+                filaSeleccionada.Cells[1].Value = Obj_Producto.producto;
+                filaSeleccionada.Cells[2].Value = Obj_Producto.categoria;
+                filaSeleccionada.Cells[3].Value = Obj_Producto.precio;
+                filaSeleccionada.Cells[4].Value = Obj_Producto.cantidad;
+                filaSeleccionada.Cells[5].Value = Obj_Producto.Sub_Total().ToString();
+                filaSeleccionada.Cells[6].Value = Obj_Producto.condicion;
+                filaSeleccionada.Cells[7].Value = Obj_Producto.estado;
+
+                filaSeleccionada = null; // limpiar referencia
+            }
 
             Limpiar();
+            Activartext(false);
+            ActivarBotones(true, false, false, false, true, true);
         }
 
         private void verificacion()
@@ -252,16 +273,18 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
         {
             foreach (DataGridViewRow row in dgv_Mantenimiento.Rows)
             {
-                if (row.Index == e.RowIndex)
+                if (e.RowIndex >= 0)
                 {
-                    txt_Numero.Text = row.Cells[0].Value.ToString();
-                    txt_Producto.Text = row.Cells[1].Value.ToString();
-                    cmb_Categoria.Text = row.Cells[2].Value.ToString() ;
-                    txt_Precio.Text = row.Cells[3].Value.ToString();
-                    txt_Cantidad.Text = row.Cells[4].Value.ToString();
-                    txt_Sub_Total.Text = row.Cells[5].Value.ToString();
+                    filaSeleccionada = dgv_Mantenimiento.Rows[e.RowIndex];
 
-                    ActivarBotones(false,false,true,false,false,true);
+                    txt_Numero.Text = filaSeleccionada.Cells[0].Value.ToString();
+                    txt_Producto.Text = filaSeleccionada.Cells[1].Value.ToString();
+                    cmb_Categoria.Text = filaSeleccionada.Cells[2].Value.ToString();
+                    txt_Precio.Text = filaSeleccionada.Cells[3].Value.ToString();
+                    txt_Cantidad.Text = filaSeleccionada.Cells[4].Value.ToString();
+                    txt_Sub_Total.Text = filaSeleccionada.Cells[5].Value.ToString();
+
+                    ActivarBotones(false, false, true, true, true, true);
                     Activartext(false);
                 }
             }
@@ -271,6 +294,73 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
         {
             Activartext(true);
             ActivarBotones(false, true, false, true, true, true);
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("¿Esta seguro de eliminar el registro?", "Sistema",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (dgv_Mantenimiento.CurrentRow != null)
+                {
+                    dgv_Mantenimiento.Rows.Remove(dgv_Mantenimiento.CurrentRow);
+                }
+            }
+            Limpiar();
+        }
+
+        private void MostrarDatosRegistroSelecionado()
+        {
+
+            if (dgv_Mantenimiento.CurrentRow != null)
+            {
+                DataGridViewRow filaSeleccionada = dgv_Mantenimiento.CurrentRow;
+
+                txt_Numero.Text = filaSeleccionada.Cells[0].Value.ToString();
+                txt_Producto.Text = filaSeleccionada.Cells[1].Value.ToString();
+                cmb_Categoria.Text = filaSeleccionada.Cells[2].Value.ToString();
+                txt_Precio.Text = filaSeleccionada.Cells[3].Value.ToString();
+                txt_Cantidad.Text = filaSeleccionada.Cells[4].Value.ToString();
+                txt_Sub_Total.Text = filaSeleccionada.Cells[5].Value.ToString();
+            }
+        }
+
+        private void btn_Primero_Click(object sender, EventArgs e)
+        {
+            if (dgv_Mantenimiento.Rows.Count > 0)
+            {
+                dgv_Mantenimiento.CurrentCell = dgv_Mantenimiento.Rows[0].Cells[0];
+                MostrarDatosRegistroSelecionado();
+            }
+        }
+
+        private void btn_Anterior_Click(object sender, EventArgs e)
+        {
+            if (dgv_Mantenimiento.CurrentRow != null && dgv_Mantenimiento.CurrentRow.Index > 0)
+            {
+                int indiceAnterior = dgv_Mantenimiento.CurrentRow.Index - 1;
+                dgv_Mantenimiento.CurrentCell = dgv_Mantenimiento.Rows[indiceAnterior].Cells[0];
+                MostrarDatosRegistroSelecionado();
+            }
+        }
+
+        private void btn_Siguiente_Click(object sender, EventArgs e)
+        {
+            if (dgv_Mantenimiento.CurrentRow != null && dgv_Mantenimiento.CurrentRow.Index < dgv_Mantenimiento.Rows.Count - 1)
+            {
+                int indiceSiguiente = dgv_Mantenimiento.CurrentRow.Index + 1;
+                dgv_Mantenimiento.CurrentCell = dgv_Mantenimiento.Rows[indiceSiguiente].Cells[0];
+                MostrarDatosRegistroSelecionado();
+            }
+        }
+
+        private void btn_Ultimo_Click(object sender, EventArgs e)
+        {
+            int ultimaFilaIndex = dgv_Mantenimiento.Rows.Count - 1;
+            if (ultimaFilaIndex >= 0)
+            {
+                dgv_Mantenimiento.CurrentCell = dgv_Mantenimiento.Rows[ultimaFilaIndex].Cells[0];
+                MostrarDatosRegistroSelecionado();
+            }
         }
     }
 }
