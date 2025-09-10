@@ -63,15 +63,6 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
             rdb_Regular.Enabled = true;
 
             chb_Activo.Enabled = true;
-
-
-            Obj_Producto.numero = txt_Numero.Text;
-            Obj_Producto.producto = txt_Producto.Text;
-            Obj_Producto.categoria = cmb_Categoria.Text;
-            Obj_Producto.precio = Convert.ToDouble(txt_Precio.Text);
-            Obj_Producto.cantidad = Convert.ToInt32(txt_Cantidad.Text);
-
-
         }
 
         private void btn_Cerrar_Click(object sender, EventArgs e)
@@ -119,6 +110,55 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
             {
                 MessageBox.Show("Solo puede ingresar numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Handled = true;
+            }
+        }
+
+        private void btn_Grabar_Click(object sender, EventArgs e)
+        {
+            verificacion();
+
+            Obj_Producto.numero = txt_Numero.Text;
+            Obj_Producto.producto = txt_Producto.Text;
+            Obj_Producto.categoria = cmb_Categoria.Text;
+            Obj_Producto.precio = Convert.ToDouble(txt_Precio.Text);
+            Obj_Producto.cantidad = Convert.ToInt32(txt_Cantidad.Text);
+
+            txt_Sub_Total.Text = Obj_Producto.Sub_Total().ToString();
+
+            dgv_Mantenimiento.Rows.Add(Obj_Producto.numero, Obj_Producto.producto);
+
+        }
+
+        private void verificacion()
+        {
+            if (string.IsNullOrEmpty(txt_Numero.Text))
+            {
+                MessageBox.Show("Ingrese el numero del producto");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_Producto.Text))
+            {
+                MessageBox.Show("Ingrese el nombre del producto");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(cmb_Categoria.Text))
+            {
+                MessageBox.Show("Ingrese la categoria");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_Precio.Text))
+            {
+                MessageBox.Show("Ingrese el precio");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_Cantidad.Text))
+            {
+                MessageBox.Show("Ingrese la cantidad");
+                return;
             }
         }
     }

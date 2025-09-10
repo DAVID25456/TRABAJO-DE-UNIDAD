@@ -58,8 +58,16 @@
             this.btn_Anterior = new System.Windows.Forms.Button();
             this.btn_Siguiente = new System.Windows.Forms.Button();
             this.btn_Ultimo = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgv_Mantenimiento = new System.Windows.Forms.DataGridView();
+            this.col_numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_condicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Mantenimiento)).BeginInit();
             this.SuspendLayout();
             // 
             // btninformacion
@@ -283,6 +291,7 @@
             this.btn_Grabar.TabIndex = 37;
             this.btn_Grabar.Text = "Grabar";
             this.btn_Grabar.UseVisualStyleBackColor = true;
+            this.btn_Grabar.Click += new System.EventHandler(this.btn_Grabar_Click);
             // 
             // btn_Editar
             // 
@@ -365,20 +374,88 @@
             this.btn_Ultimo.Text = "Ultimo";
             this.btn_Ultimo.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgv_Mantenimiento
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 380);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(581, 150);
-            this.dataGridView1.TabIndex = 46;
+            this.dgv_Mantenimiento.AllowUserToAddRows = false;
+            this.dgv_Mantenimiento.AllowUserToDeleteRows = false;
+            this.dgv_Mantenimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Mantenimiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_numero,
+            this.col_Producto,
+            this.col_Categoria,
+            this.col_precio,
+            this.col_cantidad,
+            this.col_subtotal,
+            this.col_condicion,
+            this.col_Estado});
+            this.dgv_Mantenimiento.Location = new System.Drawing.Point(12, 380);
+            this.dgv_Mantenimiento.Name = "dgv_Mantenimiento";
+            this.dgv_Mantenimiento.ReadOnly = true;
+            this.dgv_Mantenimiento.Size = new System.Drawing.Size(581, 150);
+            this.dgv_Mantenimiento.TabIndex = 46;
+            // 
+            // col_numero
+            // 
+            this.col_numero.HeaderText = "Numero";
+            this.col_numero.Name = "col_numero";
+            this.col_numero.ReadOnly = true;
+            this.col_numero.Width = 50;
+            // 
+            // col_Producto
+            // 
+            this.col_Producto.HeaderText = "Porducto";
+            this.col_Producto.Name = "col_Producto";
+            this.col_Producto.ReadOnly = true;
+            this.col_Producto.Width = 50;
+            // 
+            // col_Categoria
+            // 
+            this.col_Categoria.HeaderText = "Categoria";
+            this.col_Categoria.Name = "col_Categoria";
+            this.col_Categoria.ReadOnly = true;
+            this.col_Categoria.Width = 50;
+            // 
+            // col_precio
+            // 
+            this.col_precio.HeaderText = "Precio";
+            this.col_precio.Name = "col_precio";
+            this.col_precio.ReadOnly = true;
+            this.col_precio.Width = 50;
+            // 
+            // col_cantidad
+            // 
+            this.col_cantidad.HeaderText = "Cantidad";
+            this.col_cantidad.Name = "col_cantidad";
+            this.col_cantidad.ReadOnly = true;
+            this.col_cantidad.Width = 50;
+            // 
+            // col_subtotal
+            // 
+            this.col_subtotal.HeaderText = "Sub Total";
+            this.col_subtotal.Name = "col_subtotal";
+            this.col_subtotal.ReadOnly = true;
+            this.col_subtotal.Width = 50;
+            // 
+            // col_condicion
+            // 
+            this.col_condicion.HeaderText = "Condicion";
+            this.col_condicion.Name = "col_condicion";
+            this.col_condicion.ReadOnly = true;
+            this.col_condicion.Width = 50;
+            // 
+            // col_Estado
+            // 
+            this.col_Estado.HeaderText = "Estado";
+            this.col_Estado.Name = "col_Estado";
+            this.col_Estado.ReadOnly = true;
+            this.col_Estado.Width = 50;
             // 
             // Ejercicio_19
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 545);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_Mantenimiento);
             this.Controls.Add(this.btn_Ultimo);
             this.Controls.Add(this.btn_Siguiente);
             this.Controls.Add(this.btn_Anterior);
@@ -411,7 +488,7 @@
             this.Controls.Add(this.btninformacion);
             this.Name = "Ejercicio_19";
             this.Text = "Ejercicio_19";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Mantenimiento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,6 +526,14 @@
         private System.Windows.Forms.Button btn_Anterior;
         private System.Windows.Forms.Button btn_Siguiente;
         private System.Windows.Forms.Button btn_Ultimo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Mantenimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_subtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_condicion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Estado;
     }
 }

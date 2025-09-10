@@ -91,6 +91,20 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
                 return;
             }
 
+            if (int.TryParse(txt_Min.Text, out int minutosJugados))
+            {
+                if (minutosJugados > 120)
+                {
+                    MessageBox.Show("El tiempo máximo de un partido, incluyendo prórroga, es de 120 minutos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un número válido de minutos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (band>9)
             {
                 MessageBox.Show("Ya ingreso la informacion de todos los integrantes del equipo");
