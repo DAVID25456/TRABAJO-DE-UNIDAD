@@ -30,7 +30,7 @@
         {
             this.lstResultados = new System.Windows.Forms.ListBox();
             this.btnCalcular = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEjercicio1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -39,7 +39,7 @@
             // lstResultados
             // 
             this.lstResultados.FormattingEnabled = true;
-            this.lstResultados.Location = new System.Drawing.Point(372, 198);
+            this.lstResultados.Location = new System.Drawing.Point(317, 192);
             this.lstResultados.Name = "lstResultados";
             this.lstResultados.Size = new System.Drawing.Size(370, 212);
             this.lstResultados.TabIndex = 66;
@@ -47,7 +47,7 @@
             // btnCalcular
             // 
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(492, 106);
+            this.btnCalcular.Location = new System.Drawing.Point(437, 100);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(110, 31);
             this.btnCalcular.TabIndex = 65;
@@ -55,15 +55,15 @@
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
-            // label1
+            // lbl_Titulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(412, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 20);
-            this.label1.TabIndex = 64;
-            this.label1.Text = "Cálculo de Pago de Trabajadores";
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(357, 33);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(274, 20);
+            this.lbl_Titulo.TabIndex = 64;
+            this.lbl_Titulo.Text = "Cálculo de Pago de Trabajadores";
             // 
             // panel1
             // 
@@ -93,7 +93,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lstResultados);
             this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.panel1);
             this.Name = "Ejercicio_04";
             this.Text = "Ejercicio_04";
@@ -107,7 +107,7 @@
 
         private System.Windows.Forms.ListBox lstResultados;
         private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnEjercicio1;
     }

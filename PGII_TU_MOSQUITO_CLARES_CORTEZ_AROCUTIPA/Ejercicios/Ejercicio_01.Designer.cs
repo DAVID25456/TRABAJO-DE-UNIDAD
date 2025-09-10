@@ -34,11 +34,11 @@
             this.btnDepositar = new System.Windows.Forms.Button();
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.cmbClientes = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Monto = new System.Windows.Forms.Label();
+            this.lbl_Clliente = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEjercicio1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -106,27 +106,27 @@
             this.cmbClientes.Size = new System.Drawing.Size(125, 21);
             this.cmbClientes.TabIndex = 36;
             // 
-            // label2
+            // lbl_Monto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(286, 173);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "MONTO:";
+            this.lbl_Monto.AutoSize = true;
+            this.lbl_Monto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Monto.Location = new System.Drawing.Point(286, 173);
+            this.lbl_Monto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Monto.Name = "lbl_Monto";
+            this.lbl_Monto.Size = new System.Drawing.Size(56, 13);
+            this.lbl_Monto.TabIndex = 35;
+            this.lbl_Monto.Text = "MONTO:";
             // 
-            // label1
+            // lbl_Clliente
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(281, 128);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "CLIENTE:";
+            this.lbl_Clliente.AutoSize = true;
+            this.lbl_Clliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Clliente.Location = new System.Drawing.Point(281, 128);
+            this.lbl_Clliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Clliente.Name = "lbl_Clliente";
+            this.lbl_Clliente.Size = new System.Drawing.Size(63, 13);
+            this.lbl_Clliente.TabIndex = 34;
+            this.lbl_Clliente.Text = "CLIENTE:";
             // 
             // panel1
             // 
@@ -149,15 +149,15 @@
             this.btnEjercicio1.UseVisualStyleBackColor = true;
             this.btnEjercicio1.Click += new System.EventHandler(this.btnEjercicio1_Click);
             // 
-            // label3
+            // lbl_Titulo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(226, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(668, 25);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Simulación de operaciones bancarias con clientes y depósitos";
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(226, 23);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(668, 25);
+            this.lbl_Titulo.TabIndex = 42;
+            this.lbl_Titulo.Text = "Simulación de operaciones bancarias con clientes y depósitos";
             // 
             // button1
             // 
@@ -181,10 +181,10 @@
             this.Controls.Add(this.btnDepositar);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.cmbClientes);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Monto);
+            this.Controls.Add(this.lbl_Clliente);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.button1);
             this.Name = "Ejercicio_01";
             this.Text = "Ejercicio_01";
@@ -197,16 +197,16 @@
         #endregion
 
         private System.Windows.Forms.ListBox lstClientes;
-        private System.Windows.Forms.Button btnTotalBanco;
         private System.Windows.Forms.Button btnRetirar;
         private System.Windows.Forms.Button btnDepositar;
         private System.Windows.Forms.TextBox txtMonto;
         private System.Windows.Forms.ComboBox cmbClientes;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Monto;
+        private System.Windows.Forms.Label lbl_Clliente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnEjercicio1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTotalBanco;
     }
 }

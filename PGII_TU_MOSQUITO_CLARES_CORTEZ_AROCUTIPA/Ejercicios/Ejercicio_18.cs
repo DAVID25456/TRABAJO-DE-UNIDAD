@@ -109,8 +109,6 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
             {
                 MessageBox.Show("Selecciona un elemento para eliminar");
             }
-
-
         }
 
         private void btn_Generar_Matricula_Click(object sender, EventArgs e)

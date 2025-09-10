@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             this.lstResultados = new System.Windows.Forms.ListBox();
             this.txtExamen = new System.Windows.Forms.TextBox();
             this.txtTrabajos = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_Examen = new System.Windows.Forms.Label();
+            this.lbl_Trabajo = new System.Windows.Forms.Label();
+            this.lbl_Practica = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.txtPractica = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,15 +42,15 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label5
+            // lbl_Titulo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(315, 56);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(506, 20);
-            this.label5.TabIndex = 76;
-            this.label5.Text = "Cálculo de Calificaciones Finales con Validación de Estado Académico";
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(315, 56);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(506, 20);
+            this.lbl_Titulo.TabIndex = 76;
+            this.lbl_Titulo.Text = "Cálculo de Calificaciones Finales con Validación de Estado Académico";
             // 
             // lstResultados
             // 
@@ -74,35 +74,35 @@
             this.txtTrabajos.Size = new System.Drawing.Size(100, 20);
             this.txtTrabajos.TabIndex = 73;
             // 
-            // label4
+            // lbl_Examen
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(274, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 20);
-            this.label4.TabIndex = 72;
-            this.label4.Text = "Nota Examen Final";
+            this.lbl_Examen.AutoSize = true;
+            this.lbl_Examen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Examen.Location = new System.Drawing.Point(274, 226);
+            this.lbl_Examen.Name = "lbl_Examen";
+            this.lbl_Examen.Size = new System.Drawing.Size(143, 20);
+            this.lbl_Examen.TabIndex = 72;
+            this.lbl_Examen.Text = "Nota Examen Final";
             // 
-            // label3
+            // lbl_Trabajo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(274, 184);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 20);
-            this.label3.TabIndex = 71;
-            this.label3.Text = "Nota Trabajos";
+            this.lbl_Trabajo.AutoSize = true;
+            this.lbl_Trabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Trabajo.Location = new System.Drawing.Point(274, 184);
+            this.lbl_Trabajo.Name = "lbl_Trabajo";
+            this.lbl_Trabajo.Size = new System.Drawing.Size(108, 20);
+            this.lbl_Trabajo.TabIndex = 71;
+            this.lbl_Trabajo.Text = "Nota Trabajos";
             // 
-            // label2
+            // lbl_Practica
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(274, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 20);
-            this.label2.TabIndex = 70;
-            this.label2.Text = "Nota Práctica";
+            this.lbl_Practica.AutoSize = true;
+            this.lbl_Practica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Practica.Location = new System.Drawing.Point(274, 145);
+            this.lbl_Practica.Name = "lbl_Practica";
+            this.lbl_Practica.Size = new System.Drawing.Size(104, 20);
+            this.lbl_Practica.TabIndex = 70;
+            this.lbl_Practica.Text = "Nota Práctica";
             // 
             // btnCalcular
             // 
@@ -148,13 +148,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 311);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.lstResultados);
             this.Controls.Add(this.txtExamen);
             this.Controls.Add(this.txtTrabajos);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_Examen);
+            this.Controls.Add(this.lbl_Trabajo);
+            this.Controls.Add(this.lbl_Practica);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.txtPractica);
             this.Controls.Add(this.panel1);
@@ -168,13 +168,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.ListBox lstResultados;
         private System.Windows.Forms.TextBox txtExamen;
         private System.Windows.Forms.TextBox txtTrabajos;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_Examen;
+        private System.Windows.Forms.Label lbl_Trabajo;
+        private System.Windows.Forms.Label lbl_Practica;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.TextBox txtPractica;
         private System.Windows.Forms.Panel panel1;

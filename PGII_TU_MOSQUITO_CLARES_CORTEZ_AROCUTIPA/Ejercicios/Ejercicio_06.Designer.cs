@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.lbl_Promedios = new System.Windows.Forms.Label();
+            this.lbl_Datos = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.dgvNotas = new System.Windows.Forms.DataGridView();
@@ -40,41 +40,42 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label3
+            // lbl_Titulo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(263, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(531, 20);
-            this.label3.TabIndex = 71;
-            this.label3.Text = "Evaluación de la Calidad del Servicio en una EPS por Especialidad y Turno";
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(263, 23);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(531, 20);
+            this.lbl_Titulo.TabIndex = 71;
+            this.lbl_Titulo.Text = "Evaluación de la Calidad del Servicio en una EPS por Especialidad y Turno";
             // 
-            // label2
+            // lbl_Promedios
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(258, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
-            this.label2.TabIndex = 70;
-            this.label2.Text = "Promedios";
+            this.lbl_Promedios.AutoSize = true;
+            this.lbl_Promedios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Promedios.Location = new System.Drawing.Point(258, 171);
+            this.lbl_Promedios.Name = "lbl_Promedios";
+            this.lbl_Promedios.Size = new System.Drawing.Size(84, 20);
+            this.lbl_Promedios.TabIndex = 70;
+            this.lbl_Promedios.Text = "Promedios";
             // 
-            // label1
+            // lbl_Datos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(263, 106);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 20);
-            this.label1.TabIndex = 69;
-            this.label1.Text = "Datos";
+            this.lbl_Datos.AutoSize = true;
+            this.lbl_Datos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Datos.Location = new System.Drawing.Point(263, 106);
+            this.lbl_Datos.Name = "lbl_Datos";
+            this.lbl_Datos.Size = new System.Drawing.Size(52, 20);
+            this.lbl_Datos.TabIndex = 69;
+            this.lbl_Datos.Text = "Datos";
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(352, 171);
+            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.Location = new System.Drawing.Point(352, 165);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(130, 23);
+            this.btnCalcular.Size = new System.Drawing.Size(130, 32);
             this.btnCalcular.TabIndex = 68;
             this.btnCalcular.Text = "Calcular Promedios";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -82,9 +83,10 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(352, 103);
+            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.Location = new System.Drawing.Point(352, 97);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(130, 23);
+            this.btnCargar.Size = new System.Drawing.Size(130, 38);
             this.btnCargar.TabIndex = 67;
             this.btnCargar.Text = "Cargar Datos";
             this.btnCargar.UseVisualStyleBackColor = true;
@@ -125,9 +127,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Titulo);
+            this.Controls.Add(this.lbl_Promedios);
+            this.Controls.Add(this.lbl_Datos);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.dgvNotas);
@@ -143,9 +145,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Titulo;
+        private System.Windows.Forms.Label lbl_Promedios;
+        private System.Windows.Forms.Label lbl_Datos;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.DataGridView dgvNotas;
