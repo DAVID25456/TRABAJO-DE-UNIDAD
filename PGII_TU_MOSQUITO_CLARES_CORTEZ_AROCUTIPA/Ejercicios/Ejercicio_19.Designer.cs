@@ -308,6 +308,7 @@
             this.btn_Editar.TabIndex = 38;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // btn_Eliminar
             // 
@@ -400,6 +401,7 @@
             this.dgv_Mantenimiento.ReadOnly = true;
             this.dgv_Mantenimiento.Size = new System.Drawing.Size(581, 150);
             this.dgv_Mantenimiento.TabIndex = 46;
+            this.dgv_Mantenimiento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Mantenimiento_CellClick);
             // 
             // col_numero
             // 

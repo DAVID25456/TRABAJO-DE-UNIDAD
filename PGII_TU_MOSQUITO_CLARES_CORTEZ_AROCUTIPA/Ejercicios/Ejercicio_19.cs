@@ -44,25 +44,37 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
             MessageBox.Show("Elaborar un programa que permita realizar el mantenimiento de productos (Grabar, Modificar, Eliminar, Listar). Los campos son Número, Nombre de Producto, Categoria, Precio, Cantidad, SubTotal, Condición, Estado Teniendo en cuenta lo siguiente:\n \n- El campo número debe ser correlativo \nLa categoría debe ser un combobox (Disco Duro, Laptop, Computadora, Impresora, Monitor, Tablet). \n-El campo Sub Total debe calcularse automáticamente \n-El Campo condición debe ser un Radiobutton (Bueno / Regular / Malo) \n-El campo Estado debe ser Check radiobutton (Activo / Inactivo)", "Informacion del Ejercicio 19", MessageBoxButtons.OK);
         }
 
+        public void ActivarBotones(bool a, bool b, bool c, bool d, bool e, bool f)
+        {
+            btn_Nuevo.Enabled = a;
+            btn_Grabar.Enabled = b;
+            btn_Editar.Enabled = c;
+            btn_Eliminar.Enabled = d;
+            btn_Cancelar.Enabled = e;
+            btn_Cerrar.Enabled = f;
+
+        }
+
+        public void Activartext(bool x)
+        {
+            txt_Numero.Enabled = x;
+            txt_Producto.Enabled = x;
+            cmb_Categoria.Enabled = x;
+            txt_Precio.Enabled = x;
+            txt_Cantidad.Enabled = x;
+
+            rdb_Bueno.Enabled = x;
+            rdb_Malo.Enabled = x;
+            rdb_Regular.Enabled = x;
+
+            chb_Activo.Enabled = x;
+        }
+
         private void btn_Nuevo_Click(object sender, EventArgs e)
         {
-            btn_Nuevo.Enabled = false;
-            btn_Grabar.Enabled = true;
-            btn_Editar.Enabled = true;
-            btn_Eliminar.Enabled = true;
-            btn_Cancelar.Enabled = true;
+            ActivarBotones(false, true, false, false, true, true);
 
-            txt_Numero.Enabled = true;
-            txt_Producto.Enabled = true;
-            cmb_Categoria.Enabled = true;
-            txt_Precio.Enabled = true;
-            txt_Cantidad.Enabled = true;
-
-            rdb_Bueno.Enabled = true;
-            rdb_Malo.Enabled = true;
-            rdb_Regular.Enabled = true;
-
-            chb_Activo.Enabled = true;
+            Activartext(true);
         }
 
         private void btn_Cerrar_Click(object sender, EventArgs e)
@@ -116,12 +128,7 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
         private void btn_Grabar_Click(object sender, EventArgs e)
         {
             verificacion();
-
-            Obj_Producto.numero = txt_Numero.Text;
-            Obj_Producto.producto = txt_Producto.Text;
-            Obj_Producto.categoria = cmb_Categoria.Text;
-            Obj_Producto.precio = Convert.ToDouble(txt_Precio.Text);
-            Obj_Producto.cantidad = Convert.ToInt32(txt_Cantidad.Text);
+            //ActivarBotones("");
 
             txt_Sub_Total.Text = Obj_Producto.Sub_Total().ToString();
 
@@ -161,8 +168,7 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
                                        Obj_Producto.condicion,
                                        Obj_Producto.estado);
 
-
-
+            Limpiar();
         }
 
         private void verificacion()
@@ -172,11 +178,19 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
                 MessageBox.Show("Ingrese el numero del producto");
                 return;
             }
+            else
+            {
+                Obj_Producto.numero = txt_Numero.Text;
+            }
 
             if (string.IsNullOrEmpty(txt_Producto.Text))
             {
                 MessageBox.Show("Ingrese el nombre del producto");
                 return;
+            }
+            else
+            {
+                Obj_Producto.producto = txt_Producto.Text;
             }
 
             if (string.IsNullOrEmpty(cmb_Categoria.Text))
@@ -184,11 +198,19 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
                 MessageBox.Show("Ingrese la categoria");
                 return;
             }
+            else
+            {
+                Obj_Producto.categoria = cmb_Categoria.Text;
+            }
 
             if (string.IsNullOrEmpty(txt_Precio.Text))
             {
                 MessageBox.Show("Ingrese el precio");
                 return;
+            }
+            else
+            {
+                Obj_Producto.precio = Convert.ToDouble(txt_Precio.Text);
             }
 
             if (string.IsNullOrEmpty(txt_Cantidad.Text))
@@ -196,9 +218,13 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
                 MessageBox.Show("Ingrese la cantidad");
                 return;
             }
+            else
+            {
+                Obj_Producto.cantidad = Convert.ToInt32(txt_Cantidad.Text);
+            }
         }
 
-        private void btn_Cancelar_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
             txt_Numero.Clear();
             txt_Producto.Clear();
@@ -214,7 +240,37 @@ namespace PGII_TU_MOSQUITO_CLARES_CORTEZ_AROCUTIPA.Ejercicios
 
             cmb_Categoria.SelectedIndex = -1;
             cmb_Categoria.Text = string.Empty;
+        }
 
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            ActivarBotones(true,false,false,false,false,true);
+        }
+
+        private void dgv_Mantenimiento_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (DataGridViewRow row in dgv_Mantenimiento.Rows)
+            {
+                if (row.Index == e.RowIndex)
+                {
+                    txt_Numero.Text = row.Cells[0].Value.ToString();
+                    txt_Producto.Text = row.Cells[1].Value.ToString();
+                    cmb_Categoria.Text = row.Cells[2].Value.ToString() ;
+                    txt_Precio.Text = row.Cells[3].Value.ToString();
+                    txt_Cantidad.Text = row.Cells[4].Value.ToString();
+                    txt_Sub_Total.Text = row.Cells[5].Value.ToString();
+
+                    ActivarBotones(false,false,true,false,false,true);
+                    Activartext(false);
+                }
+            }
+        }
+
+        private void btn_Editar_Click(object sender, EventArgs e)
+        {
+            Activartext(true);
+            ActivarBotones(false, true, false, true, true, true);
         }
     }
 }
