@@ -28,101 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtResultados = new System.Windows.Forms.TextBox();
-            this.btnCalcular = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.dgvNotas = new System.Windows.Forms.DataGridView();
-            this.btnGenerar = new System.Windows.Forms.Button();
-            this.numEstudiantes = new System.Windows.Forms.NumericUpDown();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEjercicio1 = new System.Windows.Forms.Button();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.lstResultados = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEstudiantes)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtResultados
+            // label2
             // 
-            this.txtResultados.Location = new System.Drawing.Point(627, 41);
-            this.txtResultados.Multiline = true;
-            this.txtResultados.Name = "txtResultados";
-            this.txtResultados.Size = new System.Drawing.Size(268, 222);
-            this.txtResultados.TabIndex = 66;
-            // 
-            // btnCalcular
-            // 
-            this.btnCalcular.Location = new System.Drawing.Point(515, 158);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
-            this.btnCalcular.TabIndex = 65;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(116, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(183, 29);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "EJERCICIO 03";
             // 
             // dgvNotas
             // 
-            this.dgvNotas.AllowUserToAddRows = false;
             this.dgvNotas.AllowUserToDeleteRows = false;
             this.dgvNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNotas.Location = new System.Drawing.Point(215, 288);
+            this.dgvNotas.Location = new System.Drawing.Point(41, 92);
+            this.dgvNotas.Margin = new System.Windows.Forms.Padding(2);
             this.dgvNotas.Name = "dgvNotas";
-            this.dgvNotas.ReadOnly = true;
-            this.dgvNotas.Size = new System.Drawing.Size(596, 150);
-            this.dgvNotas.TabIndex = 64;
+            this.dgvNotas.RowHeadersWidth = 51;
+            this.dgvNotas.RowTemplate.Height = 24;
+            this.dgvNotas.Size = new System.Drawing.Size(298, 122);
+            this.dgvNotas.TabIndex = 14;
             // 
-            // btnGenerar
+            // btnCalcular
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(389, 158);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
-            this.btnGenerar.TabIndex = 63;
-            this.btnGenerar.Text = "Generar";
-            this.btnGenerar.UseVisualStyleBackColor = true;
-            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            this.btnCalcular.Location = new System.Drawing.Point(352, 92);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(82, 46);
+            this.btnCalcular.TabIndex = 13;
+            this.btnCalcular.Text = "Calcular Resultados";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click_1);
             // 
-            // numEstudiantes
+            // lstResultados
             // 
-            this.numEstudiantes.Location = new System.Drawing.Point(430, 87);
-            this.numEstudiantes.Name = "numEstudiantes";
-            this.numEstudiantes.Size = new System.Drawing.Size(120, 20);
-            this.numEstudiantes.TabIndex = 62;
+            this.lstResultados.FormattingEnabled = true;
+            this.lstResultados.Location = new System.Drawing.Point(43, 265);
+            this.lstResultados.Margin = new System.Windows.Forms.Padding(2);
+            this.lstResultados.Name = "lstResultados";
+            this.lstResultados.Size = new System.Drawing.Size(297, 147);
+            this.lstResultados.TabIndex = 12;
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.btnEjercicio1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 450);
-            this.panel1.TabIndex = 61;
-            // 
-            // btnEjercicio1
-            // 
-            this.btnEjercicio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEjercicio1.Location = new System.Drawing.Point(22, 23);
-            this.btnEjercicio1.Name = "btnEjercicio1";
-            this.btnEjercicio1.Size = new System.Drawing.Size(152, 53);
-            this.btnEjercicio1.TabIndex = 19;
-            this.btnEjercicio1.Text = "Informacion del Ejercicio";
-            this.btnEjercicio1.UseVisualStyleBackColor = true;
-            this.btnEjercicio1.Click += new System.EventHandler(this.btnEjercicio1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(41, 76);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Ingrese las notas por estudiante:";
             // 
             // Ejercicio_03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 450);
-            this.Controls.Add(this.txtResultados);
-            this.Controls.Add(this.btnCalcular);
+            this.ClientSize = new System.Drawing.Size(457, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvNotas);
-            this.Controls.Add(this.btnGenerar);
-            this.Controls.Add(this.numEstudiantes);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.lstResultados);
+            this.Controls.Add(this.label1);
             this.Name = "Ejercicio_03";
             this.Text = "Ejercicio_03";
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEstudiantes)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,12 +108,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtResultados;
-        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvNotas;
-        private System.Windows.Forms.Button btnGenerar;
-        private System.Windows.Forms.NumericUpDown numEstudiantes;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnEjercicio1;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.ListBox lstResultados;
+        private System.Windows.Forms.Label label1;
     }
 }
