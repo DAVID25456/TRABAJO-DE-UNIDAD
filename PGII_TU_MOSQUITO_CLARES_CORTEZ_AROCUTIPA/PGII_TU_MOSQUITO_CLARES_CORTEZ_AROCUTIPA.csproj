@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Clases\Ejercicio_01\clssBanco.cs" />
     <Compile Include="Clases\Ejercicio_01\clssCliente.cs" />
+    <Compile Include="Clases\Ejercicio_02\Contacto.cs" />
     <Compile Include="Clases\Ejercicio_18\cls_Estudiante.cs" />
     <Compile Include="Ejercicios\Ejercicio_01.cs">
       <SubType>Form</SubType>
@@ -180,6 +181,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ejercicios\Ejercicio_01.resx">
       <DependentUpon>Ejercicio_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\Ejercicio_02.resx">
+      <DependentUpon>Ejercicio_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\Ejercicio_03.resx">
+      <DependentUpon>Ejercicio_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\Ejercicio_04.resx">
+      <DependentUpon>Ejercicio_04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\Ejercicio_05.resx">
+      <DependentUpon>Ejercicio_05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\Ejercicio_06.resx">
+      <DependentUpon>Ejercicio_06.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ejercicios\Ejercicio_07.resx">
       <DependentUpon>Ejercicio_07.cs</DependentUpon>
